@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" styleClass="background" stylesheets="@Lit.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view.StatisticSceneController">
+   <children>
+      <LineChart fx:id="chart" layoutX="23.0" layoutY="168.0" prefHeight="471.0" prefWidth="776.0" styleClass="background" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="25.0">
+        <xAxis>
+          <NumberAxis fx:id="day" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="amount" side="LEFT" styleClass="label" />
+        </yAxis>
+      </LineChart>
+      <TableView fx:id="table" layoutX="836.0" layoutY="191.0" prefHeight="440.0" prefWidth="331.0" AnchorPane.bottomAnchor="70.0" AnchorPane.rightAnchor="30.0">
+        <columns>
+          <TableColumn fx:id="sub" prefWidth="118.0" text="Sub" />
+          <TableColumn fx:id="total" prefWidth="116.0" text="Total" />
+            <TableColumn fx:id="days" prefWidth="96.0" text="Days" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="comboMonth" layoutX="66.0" layoutY="41.0" prefWidth="150.0" promptText="Select Month" styleClass="label-bright" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="40.0" />
+      <ComboBox fx:id="comboSub" layoutX="258.0" layoutY="40.0" prefWidth="150.0" promptText="Select Month" styleClass="label-bright" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="40.0" />
+   </children>
+</AnchorPane>
